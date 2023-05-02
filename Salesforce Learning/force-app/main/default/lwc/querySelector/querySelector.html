@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  title="Conditional Rendeting">
+        <div class="slds-var-m-around_large"> Hey I am an Div tag </div>
+        <template for:each={userlist} for:item="user" >
+            <div key={user} class="slds-var-m-around_large name">{user}</div>
+        </template>
+        <div class="child"></div>
+        <lightning-button variant="brand" label="Show Detail" title="Show Detail" 
+            onclick={handleClick} class="slds-var-m-left_x-small">
+        </lightning-button>
+    </lightning-card>
+</template>

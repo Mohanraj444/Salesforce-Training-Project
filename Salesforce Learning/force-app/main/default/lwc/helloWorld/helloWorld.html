@@ -1,0 +1,55 @@
+<template>
+    <lightning-card  title="Two Way Binding">
+        <div class="slds-var-m-around_large"> 
+            <lightning-input type="text" 
+                label="Enter Dragon Power" 
+                value="Zero"
+                onkeyup={changehandler}>
+            </lightning-input>
+            <div>{fullname} and its power is {power}</div>
+        </div>
+    </lightning-card>
+
+
+    <lightning-card  title="@track Property">
+        <div class="slds-var-m-around_large"> 
+            <lightning-input type="text" 
+                label="Enter City Here" 
+                value="Melbourne"
+                onkeyup={eventhandler}>
+            </lightning-input>
+            <div>{cityname} is my city</div>
+            <div>{firstname} is the firstuser</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Conditional Rendeting">
+        <template if:false={isVisible}>
+            <div class="slds-var-m-around_large">
+                Please enter the password and click the button to see the data
+            </div>
+        </template>
+        <div class="slds-var-m-around_large">
+            <lightning-input type="password" 
+                label="Enter Passowrd" 
+                onkeyup={passwordhandler}>
+            </lightning-input>
+        </div>
+        <div class="slds-var-m-around_large"> 
+            <lightning-button variant="brand" label="Show Data" title="Show Data" 
+            onclick={handleClick} class="slds-var-m-left_x-small">
+            </lightning-button>
+
+            <template if:true={isErrorVisible}>
+                <div class="slds-text-color_destructive">
+                    Please Enter the correct Passowrd
+                </div>
+            </template>
+
+            <template if:true={isVisible}>
+                <div>This is super secrete data</div>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>
