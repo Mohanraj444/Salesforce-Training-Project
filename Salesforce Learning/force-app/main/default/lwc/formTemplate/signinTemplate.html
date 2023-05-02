@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="Signin Form">
+        <div class="slds-var-m-around_large">
+            Please enter you Email id and Password to Signin
+        </div>
+        <lightning-input class="slds-var-m-around_large"
+                        type="email" 
+                        label="Email">
+        </lightning-input>
+
+        <lightning-input class="slds-var-m-around_large"
+                        type="password" 
+                        label="Password">
+        </lightning-input>
+
+        <lightning-button variant="brand" label="Back"  onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+
+        <lightning-button variant="success" label="Signin"  onclick={signHandler} class="slds-var-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>
