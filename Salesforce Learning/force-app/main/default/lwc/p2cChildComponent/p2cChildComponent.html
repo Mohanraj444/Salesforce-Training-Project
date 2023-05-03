@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title={heading}>
+        <div class="slds-var-m-around_large">
+            <lightning-carousel>
+                <template for:each={carosulData} for:item="item">
+                    <lightning-carousel-image
+                        key = {item.header}
+                        src = {item.src}
+                        header = {item.header}
+                        description = {item.description}>
+                    </lightning-carousel-image>
+                 </template>
+            </lightning-carousel>
+        </div>
+    </lightning-card>
+</template>

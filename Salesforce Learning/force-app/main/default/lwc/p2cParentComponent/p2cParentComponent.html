@@ -1,0 +1,19 @@
+<template>
+        <c-p2c-child-component
+        heading = "Parent to Child data passing"
+        carosul-data = {obj}></c-p2c-child-component>
+
+    <lightning-card  title="Parent to Child Action Passing">
+        <div class="slds-var-m-around_large">
+            <lightning-input class="slds-var-m-around_large"
+                type="number" 
+                label="Progress Percentage"
+                value={percentageValue}
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <c-p2c-progress-bar
+            percentage-value = {percentageValue}>
+            </c-p2c-progress-bar>
+        </div>
+    </lightning-card>
+</template>
